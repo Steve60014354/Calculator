@@ -15,6 +15,7 @@
         android:layout_marginTop="100dp"
         android:layout_marginEnd="10dp"
         android:text="+"
+        android:onClick="onClickPlus"
         app:layout_constraintEnd_toStartOf="@+id/buttonMinus"
         app:layout_constraintTop_toBottomOf="@+id/display" />
 
@@ -25,6 +26,7 @@
         android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
         android:text="="
+        android:onClick="onClickEquals"
         app:layout_constraintEnd_toStartOf="@+id/buttonClear"
         app:layout_constraintTop_toBottomOf="@+id/buttonMultiply" />
 
@@ -35,6 +37,7 @@
         android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
         android:text="*"
+        android:onClick="onClickMultiply"
         app:layout_constraintEnd_toStartOf="@+id/buttonDivide"
         app:layout_constraintTop_toBottomOf="@+id/buttonPlus" />
 
@@ -45,6 +48,7 @@
         android:layout_marginTop="100dp"
         android:layout_marginEnd="16dp"
         android:text="-"
+        android:onClick="onClickMinus"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/display" />
 
@@ -54,7 +58,8 @@
         android:layout_height="50dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="16dp"
-        android:text="CE"
+        android:onClick="onClickClear"
+        android:text="C"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonDivide" />
 
@@ -65,6 +70,7 @@
         android:layout_marginTop="10dp"
         android:layout_marginEnd="16dp"
         android:text="/"
+        android:onClick="onClickDivide"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonMinus" />
 

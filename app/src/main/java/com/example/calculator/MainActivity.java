@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void getOperator(String btnText) {
         math_operator = btnText.charAt(0);
-        total1 = total1 + Double.parseDouble((String) display.getText());
+        total1 = Double.parseDouble((String) display.getText());
         display.setText("");
     }
 
@@ -85,5 +85,89 @@ public class MainActivity extends AppCompatActivity {
         Button buttonNine = findViewById(R.id.buttonNine);
         String btnNineText = (String) display.getText() + buttonNine.getText();
         display.setText(btnNineText);
+    }
+
+    public void onClickClear(View view) {
+        total2 = 0;
+        display.setText("");
+    }
+
+    public void onClickPlus(View view) {
+        Button buttonPlus = findViewById(R.id.buttonPlus);
+        String button_text = (String) buttonPlus.getText();
+        getOperator(button_text);
+    }
+
+    public void onClickMinus(View view) {
+        Button buttonMinus = findViewById(R.id.buttonMinus);
+        String button_text = (String) buttonMinus.getText();
+        getOperator(button_text);
+    }
+
+    public void onClickMultiply(View view) {
+        Button buttonMultiply = findViewById(R.id.buttonMultiply);
+        String button_text = (String) buttonMultiply.getText();
+        getOperator(button_text);
+    }
+
+    public void onClickDivide(View view) {
+        Button buttonDivide = findViewById(R.id.buttonDivide);
+        String button_text = (String) buttonDivide.getText();
+        getOperator(button_text);
+    }
+
+    public void onClickPower(View view) {
+        Button buttonPower = findViewById(R.id.buttonPower);
+        String button_text = (String) buttonPower.getText();
+        getOperator(button_text);
+    }
+
+    public void onClickSine(View view) {
+        Double total = Double.parseDouble((String) display.getText());
+        Double radians = Math.toRadians(total);
+        radians = Math.sin(radians);
+        display.setText(Double.toString(radians));
+    }
+
+    public void onClickCosine(View view) {
+        Double total = Double.parseDouble((String) display.getText());
+        Double radians = Math.toRadians(total);
+        radians = Math.cos(radians);
+        display.setText(Double.toString(radians));
+    }
+
+    public void onClickTangent(View view) {
+        Double total = Double.parseDouble((String) display.getText());
+        Double radians = Math.toRadians(total);
+        radians = Math.tan(radians);
+        display.setText(Double.toString(radians));
+    }
+
+    public void onClickSquare(View view) {
+        Double total = Double.parseDouble((String) display.getText());
+        total = Math.sqrt(total);
+        display.setText(Double.toString(total));
+    }
+
+    public void onClickEquals(View view) {
+        switch (math_operator) {
+            case '+':
+                total2 = total1 + Double.parseDouble((String) display.getText());
+                break;
+            case '-':
+                total2 = total1 - Double.parseDouble((String) display.getText());
+                break;
+            case '/':
+                total2 = total1 / Double.parseDouble((String) display.getText());
+                break;
+            case '*':
+                total2 = total1 * Double.parseDouble((String) display.getText());
+                break;
+            case '^':
+                total2 = Math.pow(total1, Double.parseDouble((String) display.getText()));
+                break;
+        }
+        display.setText(Double.toString(total2));
+        total1 = 0;
     }
 }
