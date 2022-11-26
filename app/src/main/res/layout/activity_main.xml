@@ -75,8 +75,9 @@
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
         android:text="9"
-        app:layout_constraintStart_toEndOf="@+id/ButtonEight"
-        app:layout_constraintTop_toBottomOf="@+id/buttonSix" />
+        app:layout_constraintStart_toEndOf="@+id/buttonEight"
+        app:layout_constraintTop_toBottomOf="@+id/buttonSix"
+        android:onClick="onClickNine"/>
 
     <Button
         android:id="@+id/buttonSeven"
@@ -86,17 +87,19 @@
         android:layout_marginTop="10dp"
         android:text="7"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonFour" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonFour"
+        android:onClick="onClickSeven"/>
 
     <Button
-        android:id="@+id/ButtonEight"
+        android:id="@+id/buttonEight"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
         android:text="8"
         app:layout_constraintStart_toEndOf="@+id/buttonSeven"
-        app:layout_constraintTop_toBottomOf="@+id/buttonFive" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonFive"
+        android:onClick="onClickEight"/>
 
     <Button
         android:id="@+id/buttonZero"
@@ -106,7 +109,7 @@
         android:layout_marginTop="10dp"
         android:text="0"
         app:layout_constraintStart_toEndOf="@+id/buttonSeven"
-        app:layout_constraintTop_toBottomOf="@+id/ButtonEight"
+        app:layout_constraintTop_toBottomOf="@+id/buttonEight"
         android:onClick="onClickZero"/>
 
     <Button
@@ -117,7 +120,8 @@
         android:layout_marginTop="10dp"
         android:text="6"
         app:layout_constraintStart_toEndOf="@+id/buttonFive"
-        app:layout_constraintTop_toBottomOf="@+id/buttonThree" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonThree"
+        android:onClick="onClickSix"/>
 
     <Button
         android:id="@+id/buttonFour"
@@ -127,7 +131,8 @@
         android:layout_marginTop="10dp"
         android:text="4"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonOne" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonOne"
+        android:onClick="onClickFour"/>
 
     <Button
         android:id="@+id/buttonFive"
@@ -137,7 +142,8 @@
         android:layout_marginTop="10dp"
         android:text="5"
         app:layout_constraintStart_toEndOf="@+id/buttonFour"
-        app:layout_constraintTop_toBottomOf="@+id/ButtonTwo" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonTwo"
+        android:onClick="onClickFive"/>
 
     <TextView
         android:id="@+id/display"
@@ -146,7 +152,7 @@
         android:layout_marginStart="50dp"
         android:layout_marginTop="88dp"
         android:layout_marginEnd="50dp"
-        android:text="Hello"
+        android:text=""
         android:textAlignment="center"
         android:textAppearance="@android:style/TextAppearance.Large"
         app:layout_constraintEnd_toEndOf="parent"
@@ -162,17 +168,19 @@
         android:layout_marginTop="100dp"
         android:text="1"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/display" />
+        app:layout_constraintTop_toBottomOf="@+id/display"
+        android:onClick="onClickOne"/>
 
     <Button
-        android:id="@+id/ButtonTwo"
+        android:id="@+id/buttonTwo"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="100dp"
         android:text="2"
         app:layout_constraintStart_toEndOf="@+id/buttonOne"
-        app:layout_constraintTop_toBottomOf="@+id/display" />
+        app:layout_constraintTop_toBottomOf="@+id/display"
+        android:onClick="onClickTwo"/>
 
     <Button
         android:id="@+id/buttonThree"
@@ -181,7 +189,8 @@
         android:layout_marginStart="10dp"
         android:layout_marginTop="100dp"
         android:text="3"
-        app:layout_constraintStart_toEndOf="@+id/ButtonTwo"
-        app:layout_constraintTop_toBottomOf="@+id/display" />
+        app:layout_constraintStart_toEndOf="@+id/buttonTwo"
+        app:layout_constraintTop_toBottomOf="@+id/display"
+        android:onClick="onClickThree"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
