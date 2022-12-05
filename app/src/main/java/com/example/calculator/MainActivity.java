@@ -14,7 +14,6 @@ public class MainActivity extends AppCompatActivity {
     private double total1 = 0.0;
     private double total2 = 0.0;
     private char math_operator;
-    //stage 0 = first input, stage 1 = second input, stage 2 = final
     private int stage = 0;
     TextView display;
 
