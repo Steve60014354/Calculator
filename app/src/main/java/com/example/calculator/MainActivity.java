@@ -11,6 +11,7 @@ import java.util.Objects;
 
 public class MainActivity extends AppCompatActivity {
 
+
     private double total1 = 0.0;
     private double total2 = 0.0;
     private char math_operator;
