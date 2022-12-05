@@ -191,30 +191,41 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClickSine(View view) {
-        Double total = Double.parseDouble((String) display.getText());
-        Double radians = Math.toRadians(total);
-        radians = Math.sin(radians);
-        display.setText(Double.toString(radians));
+        if (!Objects.equals((String) display.getText(), "")) {
+            Double total = Double.parseDouble((String) display.getText());
+            Double radians = Math.toRadians(total);
+            radians = Math.sin(radians);
+            display.setText(Double.toString(radians));
+        }
+
     }
 
     public void onClickCosine(View view) {
-        Double total = Double.parseDouble((String) display.getText());
-        Double radians = Math.toRadians(total);
-        radians = Math.cos(radians);
-        display.setText(Double.toString(radians));
+        if (!Objects.equals((String) display.getText(), "")) {
+            Double total = Double.parseDouble((String) display.getText());
+            Double radians = Math.toRadians(total);
+            radians = Math.cos(radians);
+            display.setText(Double.toString(radians));
+        }
+
     }
 
     public void onClickTangent(View view) {
-        Double total = Double.parseDouble((String) display.getText());
-        Double radians = Math.toRadians(total);
-        radians = Math.tan(radians);
-        display.setText(Double.toString(radians));
+        if (!Objects.equals((String) display.getText(), "")) {
+            Double total = Double.parseDouble((String) display.getText());
+            Double radians = Math.toRadians(total);
+            radians = Math.tan(radians);
+            display.setText(Double.toString(radians));
+        }
+
     }
 
     public void onClickSquare(View view) {
-        Double total = Double.parseDouble((String) display.getText());
-        total = Math.sqrt(total);
-        display.setText(Double.toString(total));
+        if (!Objects.equals((String) display.getText(), "")) {
+            Double total = Double.parseDouble((String) display.getText());
+            total = Math.sqrt(total);
+            display.setText(Double.toString(total));
+        }
     }
 
     public void onClickEquals(View view) {
